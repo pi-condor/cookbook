@@ -147,7 +147,16 @@ def triple(num):
 number = triple(10)
 ```
 ### Import statements
-Just a note: all import statements in a file usually go at the top of the Python file, one module after another separated by a single line<br><br>
+Just a note: all import statements in a file usually go at the top of the Python file, one module after another separated by a single line. You only need to import a module into your program once.<br><br>
+Example set of import statements
+```python
+import time
+import random
+import sys
+import os
+
+# Rest of code below
+```
 Importing entire modules
 ```python
 import time # imports the entire time module
@@ -189,6 +198,7 @@ if random.random() <= 0.75:
     # This code will run 75% of the time
     print("We got into the if")
 else:
+    # This code will run 25% of the time
     print("Looks like we got into the else)
 ```
 ## Pygame
