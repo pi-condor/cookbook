@@ -125,9 +125,9 @@ for counter in range(4):
 
 ### Functions
 The basic format of a function is as follows:
-```
-    def name_of_function(list_of_inputs):
-        # Code inside the function
+```python
+def name_of_function(list_of_inputs):
+    # Code inside the function
 ```    
 Notice how there is no return type (e.g., public int, public void) like in Java, just the 'def' keyword<br><br>
 Simple function
