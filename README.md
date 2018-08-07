@@ -187,7 +187,7 @@ random_decimal = random.random()
 random_int = random.randint(100) # can be 1, 2, 3, ..., or 100
 
 # 'choose(list_of_options) will pick a random value from list_of_options
-random_choice = random.choose(['fists', 'feet', 'flex seal']) #either fists, feet, or flex seal
+random_choice = random.choice(['fists', 'feet', 'flex seal']) #either fists, feet, or flex seal
 
 # 'uniform(lower_bound, upper_bound) will generate a decimal between lower_bound and upper_bound
 random_val = random.uniform(10, 20) # a random decimal between 10.0 and 20.0
