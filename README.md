@@ -100,6 +100,8 @@ else:
 while loops
 ```python
 # While loops are used when we want to loop an unspecified/unknown amount of times
+
+# Print out the message "Hi, Phil Swift here with F L E X S E A L." forever
 while True:
     print("Hi, Phil Swift here with F L E X S E A L.")
 ```
