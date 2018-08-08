@@ -241,7 +241,9 @@ while still_alive:
     - Basically, pygame stores everything the user does (keypresses, mouse movements, mouse clicks, etc.) as an event.
     - To allow your program to handle these events, you HAVE to go through each event every game loop
         - The one event you ALWAYS need to handle has the type pygame.QUIT
+            - If you don't handle this event, you can't exit out of the pygame window
     """
+    # Go through each pygame event since the last time we checked
     for event in pygame.event.get():
         # Code that runs when the user x's out of the window
         if event.type == pygame.QUIT:
@@ -261,7 +263,7 @@ while still_alive:
                 # Code to move right here
                 pass
                 
-            # If they pressed the 'q' key, move left
+            # If they pressed the 'q' key, exit the game
             elif event.key == pygame.K_q:
                 still_alive = False
 
