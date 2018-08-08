@@ -57,7 +57,7 @@ condor.print_roster()
 After you've read through all the comments in the previous code sample, try writing the following program:
  - Create a class called `Point`
  - Create a constructor for the `Point` class that takes in two parameters: x and y
-    - Inside the constructor, create x and y properties
+    - Inside the constructor, define x and y properties for your `Point` class
  - Create a `print()` method that prints: "Point(X, Y)". Make sure, of course, that you display the actual x and y values of the point, not the letters 'x' and 'y'
  - Create a `distance_to()` method that returns a double which is the distance between a given point and the provided point
  - Create two `Point` objects
