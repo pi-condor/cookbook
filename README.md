@@ -211,7 +211,7 @@ else:
 $ pip install pygame
 $ pip3 install pygame
 ```
-### Open a window
+### Setting up a game in pygame
 ```python
 import pygame # Import all of pygame
 
@@ -221,9 +221,56 @@ pygame.init()
 # Setup the display window
 width = 800
 height = 500
-game_display = pygame.display.set_mode((width, height)) # Notice the extra set of parentheses (because these are tuples)!
+game_display = pygame.display.set_mode((width, height)) # Notice the extra set of parentheses (because the coordinates are tuples)!
 game_display.fill((255, 255, 255)) # Fill the display with the (red, green, blue) color combination (in this case, white)
 pygame.display.update() # Update the display
+
+# Setup the clock for controlling the FPS
+FPS = 60
+clock = pygame.time.Clock()
+
+# Control variables
+still_alive = True
+
+# Game loop (the code the continues to run until your game is over)
+while still_alive:
+    """ 
+    ================================
+    Emptying the pygame events queue
+    ================================
+    - Basically, pygame stores everything the user does (keypresses, mouse movements, mouse clicks, etc.) as an event.
+    - To allow your program to handle these events, you HAVE to go through each event every game loop
+        - The one event you ALWAYS need to handle has the type pygame.QUIT
+    """
+    for event in pygame.event.get():
+        # Code that runs when the user x's out of the window
+        if event.type == pygame.QUIT:
+            still_alive = False # Set still_alive to false, so you will exit the game loop
+            break # Exit the events loop
+        
+        # Code that runs if the user presses down a key
+        elif event.type == pygame.KEYDOWN:
+            print(event.key)
+            # If they pressed down the left arrow key, move left
+            if event.key == pygame.K_LEFT:
+                # Code to move left here
+                pass
+                
+            # If they pressed down the right arrow key, move right
+            elif event.key == pygame.K_RIGHT:
+                # Code to move right here
+                pass
+                
+            # If they pressed the 'q' key, move left
+            elif event.key == pygame.K_q:
+                still_alive = False
+
+    # Delay pygame for 1/60 of a second (because FPS = 60)
+    clock.tick(FPS)
+                
+pygame.quit() # closes the pygame window
+quit() # Exits your program
+ 
 ```
 ## Circuitry
 ### GPIO Map
